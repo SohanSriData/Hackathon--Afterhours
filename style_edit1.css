@@ -1,31 +1,57 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(23, 21, 19, 0.974);
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
 
-header {
-    background-color: #f2f2f2;
-    padding: 10px 0;
+.header {
+    height: 55px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+  
+    background-color: rgb(45, 37, 37);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(32, 31, 28, 0.687);
+
+}
+.left-section {
+    display: flex;
+    align-items: top;
+}
+.left-section img{
+    height: 56px;
+  margin-left: 0px;
+  margin-right: 24px;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
+    float: right;
 }
 
 nav ul li {
     margin-right: 5px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0px 30px;
 }
-
+nav li a{
+    color: white;
+    text-decoration: none;
+}
+nav li a:hover{
+    color: aquamarine;
+    transition: all 0.4s ease 0s;
+}
 .frontstart  {
     position: relative;
     width: 100%;
@@ -48,6 +74,17 @@ nav ul li {
     color: white;
   }
   
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background: black;
+    cursor: pointer;
+  }
   .text-overlay h2 {
     font-size: 24px;
     margin-bottom: 5px;
@@ -65,11 +102,14 @@ nav ul li {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;  
+  
 }
-
+.frontstart:hover .overlay{
+    opacity: 0.8;
+}
 .cta-button:hover {
-    background-color: #151718;
+    background-color: rgb(23, 62, 139);
 }
 .signup-form {
     padding: 50px 0;
@@ -78,18 +118,21 @@ nav ul li {
 form {
     max-width: 400px;
     margin: 0 auto;
+    color: white;
 }
 
 form label {
-    display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
 form input {
     width: 100%;
-    padding: 10px;
-
+    padding: 5px;
+    margin-bottom: 16px;
+}
+form input.terms{
+    display: inline-block;
 }
 
 form button {
@@ -98,6 +141,7 @@ form button {
     padding: 10px;
     border: none;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 footer {
