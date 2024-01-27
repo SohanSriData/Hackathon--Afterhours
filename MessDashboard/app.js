@@ -51,3 +51,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Ensure the home content is visible by default
+    showHomePage();
+});
+
+function showHomePage() {
+    document.getElementById('homeContent').style.display = 'block';
+    document.getElementById('aboutContent').style.display = 'none';
+}
+
+function showAboutPage() {
+    document.getElementById('homeContent').style.display = 'none';
+    document.getElementById('aboutContent').style.display = 'block';
+}
+
