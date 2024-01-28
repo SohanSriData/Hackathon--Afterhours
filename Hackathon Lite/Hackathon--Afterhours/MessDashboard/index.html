@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_dashboard.css">
+    <link rel="stylesheet" href="animate.css">
+    <title>Protein Calculator</title>
+</head>
+
+<body>
+    <header class="header animated slideInDown">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container animated fadeIn">
+        <h1>Protein Calculator</h1>
+
+        <form id="menuForm">
+            <label for="foodItem">Food Item:</label>
+            <input type="text" id="foodItem" placeholder="Enter food item">
+
+            <label for="proteinContent">Protein Content (g):</label>
+            <input type="number" id="proteinContent" placeholder="Enter protein content">
+
+            <button type="button" onclick="addFoodItem()">Add Food Item</button>
+            <button type="button" onclick="clearMenu()">Clear Menu</button>
+
+            <h2>Menu for the Day</h2>
+            <ul id="foodList"></ul>
+
+            <p>Total Protein Content: <span id="totalProtein">0</span> grams</p>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
